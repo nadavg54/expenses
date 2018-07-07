@@ -11,10 +11,12 @@ import javax.persistence.Id;
 @Entity
 @Data
 public class ExpenseEntity {
+
     @Id
     private long time;
 
     private String name;
 
     private int amount;
+
 }
