@@ -23,6 +23,7 @@ plugins {
 
 ext {
 	mapstructVersion = "1.2.0.CR1"
+	lombokVersion = "1.16.14"
 }
 
 
@@ -38,19 +39,15 @@ repositories {
 	mavenCentral()
 }
 
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.4'
+}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compileOnly('org.projectlombok:lombok')
-	compile "org.mapstruct:mapstruct-jdk8:${mapstructVersion}"
-	apt "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+	compile "org.mapstruct:mapstruct-jdk8:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
+	apt "org.mapstruct:mapstruct-processor:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-}
-
-tasks.withType(JavaCompile) {
-	options.compilerArgs = [
-			'-Amapstruct.suppressGeneratorTimestamp=true'
-	]
 }
