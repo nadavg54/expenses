@@ -1,6 +1,5 @@
-package com.myExpenses.myExpenses;
+package com.myExpenses.expenses.db;
 
-import com.myExpenses.myExpenses.ExpenseEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
