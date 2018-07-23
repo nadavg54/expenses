@@ -1,4 +1,4 @@
-package com.myExpenses.expenses;
+package com.myExpenses.expenses.expesnsescontroller;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,14 +6,14 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /**
- * Created by nad on 7/7/18.
+ * Created by nad on 7/22/18.
  */
 @Data
 @NoArgsConstructor
-public class Expense {
+public class ExpenseDto {
 
-    private String name;
     private int amount;
+    private String name;
     private String type;
     private Date time;
 }
