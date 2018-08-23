@@ -16,4 +16,5 @@ public class ExpenseDto {
     private String name;
     private String type;
     private Date time;
+    private String user;
 }

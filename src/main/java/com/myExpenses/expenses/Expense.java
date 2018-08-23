@@ -16,4 +16,5 @@ public class Expense {
     private int amount;
     private String type;
     private Date time;
+    private String user;
 }

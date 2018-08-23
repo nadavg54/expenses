@@ -25,4 +25,6 @@ public class ExpenseEntity {
 
     private Date time;
 
+    private String user;
+
 }

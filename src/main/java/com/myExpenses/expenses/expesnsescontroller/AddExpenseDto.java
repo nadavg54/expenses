@@ -13,5 +13,6 @@ public class AddExpenseDto {
     private int amount;
     private String name;
     private String type;
+    private String user;
 
 }
